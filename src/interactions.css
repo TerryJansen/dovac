@@ -135,8 +135,11 @@
   border-radius: 20px;
   background: var(--panel);
 }
-.product-consult > svg {
-  color: var(--accent);
+.product-consult > img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 13px;
 }
 .product-consult h3 {
   font-size: 35px;
@@ -289,9 +292,8 @@
   .product-consult {
     padding: 30px;
   }
-  .product-consult > svg {
-    width: 80px;
-    height: 80px;
+  .product-consult > img {
+    height: 180px;
   }
   .product-consult h3 {
     font-size: 32px;

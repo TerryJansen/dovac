@@ -23,6 +23,7 @@ import "@fontsource/outfit/700.css";
 import "./styles.css";
 import "./interactions.css";
 import InnerPage from "./pages";
+import { FeaturedProducts } from "./products";
 import { url, asset, routes, base } from "./site-data";
 
 export function Reveal({ children, className = "", delay = 0 }) {
@@ -394,6 +395,7 @@ function Home() {
           </a>
         </div>
       </section>
+      <FeaturedProducts ui={{ Reveal }} />
       <section className="service-section">
         <div className="wrap service-grid">
           <Reveal className="service-image">

@@ -72,8 +72,14 @@ export function ProductExplorer({ ui }) {
             <Reveal key={p.slug} className="product-card">
               <a href={url(`producten/${p.slug}`)}>
                 <div className="product-visual">
-                  <ProductIcon type={p.icon} />
-                  <span>{p.group}</span>
+                  <img
+                    src={asset(`products/${p.slug}`)}
+                    alt={`${p.name} voor industriële toepassingen`}
+                    width="960"
+                    height="720"
+                    loading="lazy"
+                  />
+                  <span className="product-group-label">{p.group}</span>
                 </div>
                 <div className="product-card-copy">
                   <h2>{p.name}</h2>
@@ -102,6 +108,40 @@ export function ProductExplorer({ ui }) {
           </button>
         </div>
       )}
+    </section>
+  );
+}
+export function FeaturedProducts({ ui }) {
+  const { Reveal } = ui;
+  return (
+    <section className="featured-products" aria-label="Uitgelichte productgroepen">
+      <div className="wrap featured-products-head">
+        <div>
+          <p className="eyebrow">Uitgelicht</p>
+          <h2>Techniek voor ieder proces.</h2>
+        </div>
+        <p>Swipe door alle productgroepen en ontdek wat bij uw toepassing past.</p>
+      </div>
+      <div className="featured-product-rail" tabIndex="0" aria-label="Swipebare productgroepen">
+        {products.map((p, index) => (
+          <Reveal key={p.slug} className="featured-product-card" delay={index * 0.04}>
+            <a href={url(`producten/${p.slug}`)}>
+              <img
+                src={asset(`products/${p.slug}`)}
+                alt={`${p.name} voor industriële toepassingen`}
+                width="960"
+                height="720"
+                loading="eager"
+              />
+              <div>
+                <span>{p.group}</span>
+                <h3>{p.name}</h3>
+                <ArrowUpRight size={22} aria-hidden="true" />
+              </div>
+            </a>
+          </Reveal>
+        ))}
+      </div>
     </section>
   );
 }
@@ -137,7 +177,13 @@ export function ProductDetail({ product: p, ui }) {
           </Button>
         </Reveal>
         <Reveal className="product-consult">
-          <ProductIcon type={p.icon} size={112} />
+          <img
+            src={asset(`products/${p.slug}`)}
+            alt={`${p.name} voor industriële toepassingen`}
+            width="960"
+            height="720"
+            loading="lazy"
+          />
           <h3>
             Uw toepassing
             <br />
