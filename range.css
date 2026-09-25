@@ -1,0 +1,16 @@
+/* Assortment page: category groups, model lists and links to DOVAC's live product pages. */
+.range-group{margin-top:38px}
+.range-head{display:flex;flex-wrap:wrap;gap:14px;align-items:baseline;justify-content:space-between;margin-bottom:18px;border-bottom:1px solid var(--border);padding-bottom:12px}
+.range-head h2{font-size:clamp(22px,2.6vw,30px)}
+.range-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
+.range-card{border:1px solid var(--border);border-radius:18px;background:var(--surface);padding:22px 24px;min-width:0;
+ box-shadow:0 24px 60px -40px rgba(15,40,60,.45);transition:border-color .25s,box-shadow .3s}
+.range-card:hover{border-color:var(--tech)}
+.range-card h3{font-size:20px;letter-spacing:-.025em;overflow-wrap:anywhere;font-weight:500}
+.range-card p{color:var(--muted);font-size:14px;margin-top:10px}
+.range-card .range-more{display:inline-flex;gap:8px;align-items:center;margin-top:14px;font-size:13px;color:var(--accent)}
+.range-items{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:7px;border-top:1px solid var(--border);padding-top:14px}
+.range-items li{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;overflow-wrap:anywhere;padding-left:14px;position:relative}
+.range-items li::before{content:'';position:absolute;left:0;top:.55em;width:5px;height:5px;border-radius:50%;background:var(--tech)}
+.range-note{margin-top:30px;border-left:2px solid var(--accent);padding:12px 0 12px 18px;color:var(--muted);font-size:14px;max-width:720px}
+@media(max-width:767px){.range-grid{grid-template-columns:minmax(0,1fr)}.range-card{padding:18px}}

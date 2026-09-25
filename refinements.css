@@ -1,0 +1,10 @@
+/* Continuation: allow long Dutch product names to wrap, not overflow. */
+.page-title h1,.hero h1,h2,h3{overflow-wrap:anywhere;hyphens:auto}
+.hero>*,.product-detail>*,.product-service>*,.product-card>a>*,.contact-layout>*,.document-section>*,.faq-section>*,.company-story>*,.footer-grid>*,.service-grid>*{min-width:0}
+.breadcrumbs{flex-wrap:wrap}.breadcrumbs span:last-child{overflow-wrap:anywhere;min-width:0}
+.button{max-width:100%;white-space:normal;text-align:center}.text-link{max-width:100%;overflow-wrap:anywhere}
+.product-detail{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)}
+.product-service{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}
+.document-row>div,.contact-information span{min-width:0}.document-row h3{overflow-wrap:anywhere}
+@media(max-width:767px){.page-title h1{font-size:clamp(34px,9.8vw,47px)}.product-detail,.product-service{grid-template-columns:minmax(0,1fr)}.product-detail h2{font-size:clamp(29px,8vw,35px)}.big-phone{font-size:clamp(23px,7.6vw,33px)}}
+@media(max-width:360px){.wrap{width:calc(100% - 32px)}.solution{padding:24px}.solution-icon{opacity:.2}.contact-form-panel{padding:20px}.footer-grid{grid-template-columns:minmax(0,1fr)}}
